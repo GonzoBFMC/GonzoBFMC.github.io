@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Reciprocate Request Form</title>
+    <link rel="stylesheet" href="pizza.css">
+</head>
+<body>
+    <h1>Request Form to be placed on the artificial Hert waiting list</h1>
+    <p>Please fill out the form completely, any block left empty will place your request in an automatically denial status</p> 
+        <hr>
+
+    <form method="POST" id="formsend">
+        <h2>Heart Reciprocate Request Form:</h2>
+        <fieldset>
+            <legend>Your contact information:</legend>
+            <p>Name: <input type="text" name="Name" id="name"></p>
+            <p>Telephone: <input type="tel" name="Telephone" id="telephone"></p> 
+            <p>Email: <input type="email" name="Email" id="email"></p>
+            <p>Diagnos Date: <input type="Date" name="Date" id="date"></p>  
+        </fieldset>
+        <fieldset>
+            <legend>Pizza Selection:</legend>
+            <p>
+                <input type="radio" value="Male" name="size"> Male <br>
+                <input type="radio" value="Female" name="size"> Female  <br>
+                <input type="radio" value="Child" name="size"> Child under 18yrs <br>
+            </p>
+            <p>
+                <input type="checkbox" name="Coronary Disease"> Coronary Artery Disease <br>
+                <input type="checkbox" name="Heart Attack"> Heart Attack <br>
+                <input type="checkbox" name="Heart Failure"> Heart Failure <br>
+                <input type="checkbox" name="Heart Disease"> Heart Valve Disease <br>
+                <input type="checkbox" name="Conenital Disease"> Conenital Heart Disease <br>
+                <input type="checkbox" name="Vascular Disease"> Vascular Disease <br>
+            </p>
+            
+            <p>
+                <input type="hidden" name="_next" value="/umuc/cmst385/heart/thanks.html" />
+                <input type="hidden" name="_subject" value="Heart Reciprocate Request Form" />
+            </p>
+            <p><input type="submit" value="Request Form" id="btnSubmit"> &nbsp; <input id="btnReset" type="reset" value="Clear form"></p>
+
+        </fieldset> 
+     </form>
+    <script>
+        var orderform = document.getElementById('formsend');
+        orderform.setAttribute('action', 'https://formspree.io' + '/middlemandc' + '@' + 'gmail.com.');
+    </script>
+</body>
+</html>
